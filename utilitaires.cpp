@@ -42,3 +42,34 @@ bool equal2long(const t_EntierLong *longA, const t_EntierLong *longB)
   afficheEntierLong(*longB);
   return true;
 }
+
+bool compAbs2long(const t_EntierLong *longA, const t_EntierLong *longB)
+{
+  std::cout << "compAbs2long : ";
+  for (int i = 0; i < MAXCHIFFRES; i++)
+  {
+    if (longA->chiffres[i] > longB->chiffres[i])
+    {
+      afficheEntierLong(*longA);
+      std::cout << " !<= ";
+      afficheEntierLong(*longB);
+      return false;
+    }
+  }
+  afficheEntierLong(*longA);
+  std::cout << " <= ";
+  afficheEntierLong(*longB);
+  return true;
+}
+
+u_int8_t *firstDigit(const t_EntierLong *intLong)
+{
+  u_int8_t *i = new u_int8_t(0);
+  /* on recherche le 1er chiffre non nul (ou le chiffre des unites dans le cas d'un entier nul*/
+  *i = MAXCHIFFRES - 1;
+  while ((intLong->chiffres[*i] == 0) && (*i > 0))
+  {
+    *i = *i - 1;
+  }
+  return i;
+}
