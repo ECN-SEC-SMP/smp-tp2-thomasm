@@ -24,5 +24,5 @@ int main(int argc, char **argv)
   egal = compAbs2long(e, c);
 
   f = addSameSign(b, c);
-  afficheEntierLong(*f);
+  f = subSameSign(c, b);
 }
