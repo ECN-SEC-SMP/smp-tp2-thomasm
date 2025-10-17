@@ -20,7 +20,7 @@ t_EntierLong *convStdToLong(const int *intStd)
     nbChiffre++;
   } while ((intStdEditable /= 10) > 0);
   afficheEntierLong(*intLong);
-  std::cout << " (" << nbChiffre << " chiffres)" << std::endl;
+  std::cout << " (" << nbChiffre << " chiffre" << ((nbChiffre >= 2) ? "s)" : ")") << std::endl;
   return intLong;
 }
 
