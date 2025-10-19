@@ -1,5 +1,5 @@
 
-# SMP – TP2 — Entiers **longs** (compte‑rendu concis)
+# SMP – TP2 — Entiers **longs**
 
 ## 1) Introduction
 Objectif : réaliser des opérations sur des entiers à **grand nombre de chiffres** (base 10) représentés chiffre‑par‑chiffre, bornés par `MAXCHIFFRES`, avec un indicateur de signe. Les chiffres sont stockés **du moins significatif au plus significatif** (indice 0 → unités).
